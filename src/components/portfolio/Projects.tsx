@@ -138,6 +138,14 @@ const PROJECTS: Project[] = [
       "An AI-powered Discord meeting assistant that records voice channels, transcribes conversations in English and Tagalog, generates intelligent summaries, and captures key discussion points.",
     category: "Discord Bots",
     link: "#"
+  },
+  {
+  name: "Glocky Portfolio",
+  status: "Active",
+  description:
+    "My personal portfolio website featuring my Minecraft projects, web applications, desktop tools, and development journey, built to showcase what I create and what I'm currently working on.",
+  category: "Website Apps",
+  link: "#"
   }
 ];
 
