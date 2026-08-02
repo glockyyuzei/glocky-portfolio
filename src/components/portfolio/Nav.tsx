@@ -68,18 +68,6 @@ export function Nav() {
               : 'shadow-[0_4px_20px_rgba(0,0,0,0.25)]'
           }`}
         >
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToId('home');
-            }}
-            className="flex items-center justify-center w-9 h-9 mr-1 rounded-full hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
-            aria-label="Glocky Yuzei — back to top"
-          >
-            <img src="/logo.png" alt="" className="w-5 h-5 object-contain" />
-          </a>
-
           <ul className="hidden lg:flex items-center gap-0.5">
             {LINKS.map((link) => (
               <li key={link.id}>
