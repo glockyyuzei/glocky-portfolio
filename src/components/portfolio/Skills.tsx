@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Blocks,
   Globe,
@@ -50,117 +49,30 @@ const FEATURES = [
 
 const TECH_STACK = [
   {
-    category: "Languages",
-    items: ["Java", "TypeScript", "JavaScript", "HTML", "CSS"],
+    category: "Minecraft",
+    items: ["Forge", "NeoForge", "Fabric", "Paper", "Spigot", "Bukkit", "Arclight"],
+  },
+  {
+    category: "Programming",
+    items: ["Java", "C++", "Python", "JavaScript", "TypeScript", "HTML5", "CSS3", "SQL"],
   },
   {
     category: "Frontend",
-    items: ["React", "Vite", "Tailwind CSS", "Framer Motion", "shadcn/ui"],
+    items: ["React", "Vite", "Tailwind CSS", "Electron", "Node.js"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB"],
-  },
-  {
-    category: "Minecraft",
-    items: [
-      "Paper API",
-      "Spigot API",
-      "Fabric",
-      "Forge",
-      "Gradle",
-      "Adventure API",
-      "PlaceholderAPI",
-    ],
+    category: "Databases",
+    items: ["SQLite", "MySQL", "MongoDB"],
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "IntelliJ IDEA", "VS Code", "Postman"],
+    items: ["Git", "GitHub", "Gradle", "IntelliJ IDEA", "VS Code", "Linux", "npm"],
   },
   {
     category: "Currently Learning",
-    items: ["Rust", "Tauri", "Docker", "PostgreSQL"],
+    items: ["Rust", "Tauri", "Software Architecture", "System Design"],
   },
 ];
-
-const EXPERTISE = [
-  {
-    name: "Minecraft Plugin Development",
-    value: 90,
-    description: "Developing custom plugins using the Paper and Spigot APIs.",
-  },
-  {
-    name: "Minecraft Mod Development",
-    value: 75,
-    description: "Building gameplay features and systems using Forge and Fabric.",
-  },
-  {
-    name: "Frontend Development",
-    value: 80,
-    description: "Creating responsive user interfaces with React and TypeScript.",
-  },
-  {
-    name: "Backend Development",
-    value: 70,
-    description: "Developing APIs, server logic, authentication, and databases.",
-  },
-  {
-    name: "UI / UX Design",
-    value: 65,
-    description: "Designing intuitive, responsive, and modern interfaces.",
-  },
-  {
-    name: "Desktop Development",
-    value: 55,
-    description: "Learning cross-platform desktop development using Tauri and Rust.",
-  },
-];
-
-function ExpertiseBar({
-  name,
-  value,
-  description,
-  index,
-}: {
-  name: string;
-  value: number;
-  description: string;
-  index: number;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300"
-    >
-      <div className="flex items-baseline justify-between mb-2 gap-4">
-        <h4 className="text-base font-medium text-primary">{name}</h4>
-        <span className="text-sm font-semibold text-violet-400 shrink-0">
-          {value}%
-        </span>
-      </div>
-
-      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-        {description}
-      </p>
-
-      <div className="h-2 rounded-full bg-white/5 overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={isInView ? { width: `${value}%` } : { width: 0 }}
-          transition={{ duration: 1, delay: index * 0.08 + 0.2, ease: "easeOut" }}
-          className="h-full rounded-full bg-gradient-to-r from-violet-500 to-violet-400 shadow-[0_0_12px_rgba(167,139,250,0.5)]"
-        />
-      </div>
-    </motion.div>
-  );
-}
 
 export function Skills() {
   return (
@@ -213,7 +125,7 @@ export function Skills() {
         </div>
 
         {/* Section 2 — Tech stack */}
-        <div className="mb-24">
+        <div>
           <h3 className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-8">
             Tech Stack
           </h3>
@@ -242,25 +154,6 @@ export function Skills() {
                   ))}
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Section 3 — Core expertise */}
-        <div>
-          <h3 className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-8">
-            Core Expertise
-          </h3>
-
-          <div className="flex flex-col gap-4">
-            {EXPERTISE.map((skill, index) => (
-              <ExpertiseBar
-                key={skill.name}
-                name={skill.name}
-                value={skill.value}
-                description={skill.description}
-                index={index}
-              />
             ))}
           </div>
         </div>
