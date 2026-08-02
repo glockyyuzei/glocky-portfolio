@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 
 export function AnimatedCounter({ value, suffix = "" }: { value: number, suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const inView = useInView(ref, { once: true, margin: "0px" });
   const [count, setCount] = useState(0);
 
   useEffect(() => {
