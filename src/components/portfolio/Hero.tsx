@@ -56,7 +56,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           className="text-base md:text-lg text-muted-foreground max-w-2xl mb-12 leading-relaxed"
         >
-          #1 Vibe Coder in the making. I build stuff, break stuff, and occasionally know why it works. Mostly messing around with Java, Minecraft, and random projects that start with “this should be easy.” Always learning, always tinkering, and somehow making it work eventually.
+          #1 Vibe Coder. I write code, question my life choices, then somehow it works. Mostly building Minecraft stuff, web apps, and random ideas that definitely weren't supposed to become actual projects.
         </motion.p>
         
         <motion.div 
