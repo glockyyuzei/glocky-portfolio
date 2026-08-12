@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const roles = [
   "Minecraft Server Developer",
-  "Minecraft Mod & Plugin Developer"
+  "Minecraft Mod & Plugin Developer",
+  "Minecraft Software Developer"
 ];
 
 export function Hero() {

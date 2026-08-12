@@ -54,7 +54,6 @@ const TECH_STACK = [
       "Java",
       "Fabric",
       "Forge",
-      "NeoForge",
       "Paper",
       "Purpur",
       "Spigot",
