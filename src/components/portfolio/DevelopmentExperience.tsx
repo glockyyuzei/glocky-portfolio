@@ -7,7 +7,7 @@ const DEV_EXPERIENCE: DevExperience[] = [
     role: "Founder & Developer",
     duration: "August 2026 — Present",
     status: "in-development",
-    logo: "public/assets/noxara_logo.png",
+    logo: "/assets/noxara_logo.png",
     description:
       "My own Minecraft network currently under development, designed as a multi-server platform featuring different game modes such as SMP, Practice, Prison, and other planned experiences. Building the network's server systems, gameplay features, infrastructure, and supporting software.",
     tech: ["Java", "Paper"],
@@ -27,7 +27,7 @@ const DEV_EXPERIENCE: DevExperience[] = [
     role: "Developer",
     duration: "Jun 2026 — Aug 2026",
     status: "active",
-    logo: "public/assets/lumina_logo.png",
+    logo: "/assets/lumina_logo.png",
     description:
       "A modded Minecraft roleplay and adventure server that evolved through multiple seasons and concepts, including modern sci-fi, post-apocalyptic, medieval fantasy, MMORPG, and modern roleplay experiences. Contributed to the development and maintenance of custom server systems, modded gameplay, progression features, and roleplay mechanics across its different seasons.",
     tech: ["Forge", "Java"],
@@ -37,7 +37,7 @@ const DEV_EXPERIENCE: DevExperience[] = [
     role: "Founder & Lead Developer",
     duration: "Sept 2025 — Mar 2026",
     status: "offline",
-    logo: "public/assets/skyvale_logo.png",
+    logo: "/assets/skyvale_logo.png",
     description:
       "A survival multiplayer server built around player progression, competition, and economy. Founded and developed the server from the ground up, working on custom gameplay systems, progression mechanics, leaderboards, dungeons, quests, rewards, and economy features.",
     tech: ["Paper", "Java"],
@@ -47,7 +47,7 @@ const DEV_EXPERIENCE: DevExperience[] = [
     role: "Developer",
     duration: "May 2025 — Sep 2025",
     status: "offline",
-    logo: "public/assets/pearloasis_logo.png",
+    logo: "/assets/pearloasis_logo.png",
     description:
       "A community-focused survival multiplayer server featuring economy-driven progression and classic SMP gameplay. Contributed to the development and maintenance of server plugins, gameplay features, and server-side tools alongside the development team.",
     tech: ["LeafMC", "Java"],
