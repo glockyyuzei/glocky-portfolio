@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { AnimatedCounter } from './AnimatedCounter';
 
 const STATS = [
-  { label: "Projects Completed", value: 13 },
-  { label: "Programming Languages", value: 6 },
-  { label: "Years of Experience", value: 2 },
+  { label: "Projects Completed", value: 10, suffix: "+" },
+  { label: "Programming Languages", value: 5, suffix: "+" },
+  { label: "Years of Experience", value: 2, suffix: "+" },
   { label: "Technologies Used", value: 8, suffix: "+" },
 ];
 
