@@ -5,7 +5,7 @@ import {
   Monitor,
   Server,
   Palette,
-  Cloud,
+  Wrench,
 } from "lucide-react";
 
 const FEATURES = [
@@ -13,64 +13,105 @@ const FEATURES = [
     icon: Blocks,
     title: "Minecraft Development",
     description:
-      "Building custom Paper plugins, Fabric/Forge mods, gameplay systems, utilities, and server features tailored for unique Minecraft experiences.",
+      "Developing Minecraft mods, plugins, gameplay systems, server utilities, and custom features using Java and the Minecraft modding and server ecosystems.",
   },
   {
     icon: Globe,
-    title: "Web Applications",
+    title: "Web Development",
     description:
-      "Creating responsive web applications using React, TypeScript, Tailwind CSS, and modern frontend technologies with a focus on clean user experiences.",
+      "Building personal, project, and server websites with modern frontend technologies, focusing on responsive layouts, clean interfaces, and practical user experiences.",
   },
   {
     icon: Monitor,
     title: "Desktop Applications",
     description:
-      "Developing desktop tools and launchers with modern technologies while exploring cross-platform development using Tauri and Rust.",
+      "Building developer tools, launchers, and other desktop applications, with experience working with modern web-based desktop technologies and exploring native development.",
   },
   {
     icon: Server,
-    title: "Backend Development",
+    title: "Server & Backend Systems",
     description:
-      "Building APIs, authentication systems, databases, and server-side applications using Node.js and Express.",
+      "Working with Minecraft server infrastructure, server software, APIs, databases, configurations, and systems that connect different parts of an application or server.",
   },
   {
     icon: Palette,
-    title: "UI / UX Design",
+    title: "UI / UX",
     description:
-      "Designing modern interfaces with responsive layouts, smooth animations, accessibility, and attention to detail.",
+      "Designing interfaces for websites, desktop applications, and Minecraft-related tools with a focus on usability, responsive layouts, consistency, and visual clarity.",
   },
   {
-    icon: Cloud,
-    title: "Dev Tools & Deployment",
+    icon: Wrench,
+    title: "Development & Tooling",
     description:
-      "Working with Git, GitHub, deployment platforms, automation, and development workflows to efficiently ship projects.",
+      "Using Git, GitHub, Gradle, IDEs, deployment tools, and development workflows to build, test, maintain, and manage software projects.",
   },
 ];
 
 const TECH_STACK = [
   {
     category: "Minecraft",
-    items: ["Forge", "NeoForge", "Fabric", "Paper", "Spigot", "Bukkit", "Arclight"],
+    items: [
+      "Java",
+      "Fabric",
+      "Forge",
+      "NeoForge",
+      "Paper",
+      "Purpur",
+      "Spigot",
+      "Bukkit",
+      "Arclight",
+    ],
   },
   {
-    category: "Programming",
-    items: ["Java", "C++", "Python", "JavaScript", "TypeScript", "HTML5", "CSS3", "SQL"],
+    category: "Web",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+    ],
   },
   {
-    category: "Frontend",
-    items: ["React", "Vite", "Tailwind CSS", "Electron", "Node.js"],
+    category: "Desktop",
+    items: [
+      "Tauri",
+      "Rust",
+      "React",
+      "TypeScript",
+    ],
   },
   {
-    category: "Databases",
-    items: ["SQLite", "MySQL", "MongoDB"],
+    category: "Data & Backend",
+    items: [
+      "SQL",
+      "SQLite",
+      "MySQL",
+      "Node.js",
+      "REST APIs",
+    ],
   },
   {
-    category: "Tools",
-    items: ["Git", "GitHub", "Gradle", "IntelliJ IDEA", "VS Code", "Linux", "npm"],
+    category: "Development Tools",
+    items: [
+      "Git",
+      "GitHub",
+      "Gradle",
+      "npm",
+      "IntelliJ IDEA",
+      "VS Code",
+    ],
   },
   {
     category: "Currently Learning",
-    items: ["Rust", "Tauri", "Software Architecture", "System Design"],
+    items: [
+      "Rust",
+      "Tauri",
+      "System Design",
+      "Software Architecture",
+    ],
   },
 ];
 
@@ -89,22 +130,28 @@ export function Skills() {
         <h2 className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-4">
           What I Build
         </h2>
+
         <p className="text-muted-foreground max-w-2xl mb-14">
-          The technologies I work with and the types of software I enjoy
-          building.
+          Most of my development work revolves around Minecraft software and
+          server systems, with additional experience in web development,
+          desktop applications, and development tooling.
         </p>
 
-        {/* Section 1 — Feature cards */}
+        {/* Section 1 — Feature Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;
+
             return (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
                 whileHover={{ y: -4 }}
                 className="group relative p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-violet-500/30 hover:shadow-[0_0_0_1px_rgba(167,139,250,0.15),0_20px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-300 flex flex-col h-full"
               >
@@ -124,7 +171,7 @@ export function Skills() {
           })}
         </div>
 
-        {/* Section 2 — Tech stack */}
+        {/* Section 2 — Tech Stack */}
         <div>
           <h3 className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-8">
             Tech Stack
@@ -137,12 +184,16 @@ export function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
                 className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300"
               >
                 <h4 className="text-sm font-medium text-primary mb-4">
                   {group.category}
                 </h4>
+
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <span

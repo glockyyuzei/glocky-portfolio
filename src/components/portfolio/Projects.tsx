@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiGithub } from "react-icons/si";
+import { FiExternalLink } from "react-icons/fi";
 
 const STATUS_COLORS = {
   Active:
@@ -26,135 +27,85 @@ const CATEGORIES = [
 
 type Category = (typeof CATEGORIES)[number];
 
+type LinkType = "github" | "website";
+
 interface Project {
   name: string;
   status: keyof typeof STATUS_COLORS;
   description: string;
   category: Exclude<Category, "All">;
   link: string;
+  linkType?: LinkType;
 }
 
 const PROJECTS: Project[] = [
   {
-    name: "YuzeiLabs",
+    name: "Yuzei Labs",
     status: "Active",
     description:
-      "An all-in-one development platform for Minecraft mod and plugin developers. YuzeiLabs automates JAR builds, deployment to local and remote servers, Discord release publishing, AI-powered error analysis, and project management to streamline the development workflow.",
+      "An all-in-one development platform for Minecraft mod and plugin developers. YuzeiLabs automates JAR builds, deployment to local and remote servers, Discord release publishing, AI-powered error analysis, and project management. The platform is functionally developed but is currently unreleased while undergoing further testing, refinement, and stabilization.",
     category: "Desktop Apps",
-    link: "#"
+    link: "#",
   },
   {
-    name: "EclipseLauncher",
+    name: "Noxara Launcher",
     status: "In Development",
     description:
-      "A modern Minecraft launcher supporting Microsoft and offline accounts, multi-instance management, built-in mod installation, automatic updates, and developer-focused tools.",
+      "A modern Minecraft launcher focused on providing a streamlined way to manage Minecraft installations, instances, mods, and server configurations through a dedicated desktop application.",
     category: "Desktop Apps",
-    link: "#"
+    link: "#",
   },
   {
-    name: "Compound G",
+    name: "Eclipse Mods",
     status: "In Development",
     description:
-      "An AI-powered coding assistant that runs as a lightweight desktop overlay for any IDE. It supports both online and offline AI models, portable execution without installation, and productivity-focused tools for developers.",
-    category: "Desktop Apps",
-    link: "#"
-  },
-  {
-    name: "EclipseFramework",
-    status: "Active",
-    description:
-      "The shared foundation of the Eclipse ecosystem, providing reusable libraries, APIs, networking, configuration management, and common systems for every Eclipse module.",
+      "A collection of interconnected Minecraft mods developed exclusively for the Eclipse server. The ecosystem includes shared framework and API systems, economy and banking, gameplay utilities, roleplay features, moderation tools, player capabilities, agriculture, and player origin systems. These modules are designed to work together as the foundation of Eclipse's custom gameplay and roleplay experience.",
     category: "Minecraft Mods",
-    link: "#"
+    link: "#",
   },
   {
-    name: "EclipseCurrency",
-    status: "Active",
-    description:
-      "A modern banking and economy system for the Eclipse ecosystem featuring physical currency, bank accounts, ATMs, secure transactions, and persistent financial management.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "EclipseUtilities",
-    status: "Active",
-    description:
-      "A growing collection of utility modules for the Eclipse ecosystem, including Simple Voice Chat broadcast integration, EasyNPC shop support, horse utilities, stash management, and additional gameplay enhancements.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "EclipseRoleplay",
-    status: "Active",
-    description:
-      "An immersive roleplay framework featuring jobs, government systems, player licenses, HUD customization, and advanced progression mechanics.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "EclipseModeration",
-    status: "In Development",
-    description:
-      "A moderation toolkit providing staff utilities, administrative commands, player management, and quality-of-life tools for server administration.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "EclipseCapabilities",
-    status: "Active",
-    description:
-      "A flexible player capability system providing persistent attributes, custom statistics, synchronized HUD data, and extensible gameplay mechanics across the Eclipse ecosystem.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "EclipseAgriculture",
-    status: "In Development",
-    description:
-      "An agriculture expansion introducing custom farming, fishing, crops, progression systems, quests, and immersive survival mechanics.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "EclipseBirthSystem",
-    status: "In Development",
-    description:
-      "A roleplay-focused origin system allowing players to choose a home region on first join, establishing their village of origin, spawn location, and character identity.",
-    category: "Minecraft Mods",
-    link: "#"
-  },
-  {
-    name: "DiscordPinataAnnouncer",
+    name: "Discord Pinata Announcer",
     status: "Completed",
     description:
       "A Paper plugin that integrates with the PinataParty API to automatically announce Pinata spawns to Discord using customizable webhooks.",
     category: "Minecraft Plugins",
-    link: "#"
+    link: "#",
   },
   {
-    name: "EchoMeet",
+    name: "Echo Meet",
     status: "In Development",
     description:
       "An AI-powered Discord meeting assistant that records voice channels, transcribes conversations in English and Tagalog, generates intelligent summaries, and captures key discussion points.",
     category: "Discord Bots",
-    link: "#"
+    link: "#",
   },
   {
-  name: "Glocky Portfolio",
-  status: "Active",
-  description:
-    "My personal portfolio website featuring my Minecraft projects, web applications, desktop tools, and development journey, built to showcase what I create and what I'm currently working on.",
-  category: "Website Apps",
-  link: "#"
-  }
+    name: "Glocky Portfolio",
+    status: "Active",
+    description:
+      "My personal portfolio website featuring my Minecraft projects, web applications, desktop tools, and development journey, built to showcase what I create and what I'm currently working on.",
+    category: "Website Apps",
+    link: "#",
+  },
+  {
+    name: "Eclipse Servers",
+    status: "In Development",
+    description:
+      "The official website for the Eclipse server, showcasing its gameplay systems, features, development progress, and the wider Eclipse ecosystem.",
+    category: "Website Apps",
+    link: "https://eclipse-servers.vercel.app/",
+    linkType: "website",
+  },
 ];
 
 export function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("All");
+  const [selectedCategory, setSelectedCategory] =
+    useState<Category>("All");
 
   const filteredProjects = PROJECTS.filter(
     (project) =>
-      selectedCategory === "All" || project.category === selectedCategory
+      selectedCategory === "All" ||
+      project.category === selectedCategory
   );
 
   return (
@@ -172,11 +123,10 @@ export function Projects() {
           Featured Projects
         </h2>
 
-        <div
-          className="flex md:flex-wrap gap-3 mb-12 overflow-x-auto md:overflow-visible scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0"
-        >
+        <div className="flex md:flex-wrap gap-3 mb-12 overflow-x-auto md:overflow-visible scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
           {CATEGORIES.map((category) => {
             const isActive = category === selectedCategory;
+
             return (
               <button
                 key={category}
@@ -204,7 +154,10 @@ export function Projects() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.35, delay: index * 0.05 }}
+                transition={{
+                  duration: 0.35,
+                  delay: index * 0.05,
+                }}
                 className="group relative p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300 flex flex-col h-full"
               >
                 <div className="flex justify-between items-start mb-5">
@@ -228,9 +181,13 @@ export function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors p-2 -m-2"
-                      aria-label={`View ${project.name} on GitHub`}
+                      aria-label={`View ${project.name}`}
                     >
-                      <SiGithub className="w-5 h-5" />
+                      {project.linkType === "website" ? (
+                        <FiExternalLink className="w-5 h-5" />
+                      ) : (
+                        <SiGithub className="w-5 h-5" />
+                      )}
                     </a>
                   )}
                 </div>

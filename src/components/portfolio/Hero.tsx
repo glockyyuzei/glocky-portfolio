@@ -56,7 +56,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           className="text-base md:text-lg text-muted-foreground max-w-2xl mb-12 leading-relaxed"
         >
-          #1 Vibe Coder. I write code, question my life choices, then somehow it works. Mostly building Minecraft stuff, web apps, and random ideas that definitely weren't supposed to become actual projects.
+          Nambawan vibe coder. My algorithm is basically: think of stuff, prompt, paste, debug, question my life choices, and welp... now it's a project.
         </motion.p>
         
         <motion.div 
