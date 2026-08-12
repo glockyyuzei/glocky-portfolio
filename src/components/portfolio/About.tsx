@@ -22,7 +22,13 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-16">
           <div className="text-lg text-primary/90 leading-relaxed font-light">
             <p className="mb-6">
-              I'm Glocky Yuzei, a second-year Bachelor of Science in Information Technology (BSIT) student at ACLC College of Tacloban with a passion for software development. I enjoy turning ideas into real applications, with most of my work centered around the Minecraft ecosystem. From mods and plugins to launchers and developer tools, I love building projects that challenge me to learn and improve every day.
+              I'm Danmil F. Balotol, also known online as Glocky Yuzei. I'm a second-year
+              Bachelor of Science in Information Technology (BSIT) student at ACLC College
+              of Tacloban with a passion for software development. I enjoy turning ideas
+              into real, working applications, with most of my work focused on the
+              Minecraft ecosystem. From mods and plugins to server systems, web
+              applications, launchers, and developer tools, I like building projects that
+              challenge me to learn, experiment, and improve along the way.
             </p>
             <p>
               Beyond Minecraft development, I'm continuously exploring new technologies and expanding my knowledge in software engineering. My goal is to become a versatile developer who creates reliable, scalable, and well-designed applications while constantly refining my skills through hands-on experience and personal projects.
