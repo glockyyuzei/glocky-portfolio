@@ -46,7 +46,7 @@ const PROJECTS: Project[] = [
       "An all-in-one development platform for Minecraft mod and plugin developers. YuzeiLabs automates JAR builds, deployment to local and remote servers, Discord release publishing, AI-powered error analysis, and project management. The platform is functionally developed but is currently unreleased while undergoing further testing, refinement, and stabilization.",
     category: "Desktop Apps",
     link: "https://github.com/glockyyuzei/yuzei-labs",
-    linkType: "website",
+    linkType: "github",
   },
   {
     name: "Noxara Launcher",
@@ -55,6 +55,7 @@ const PROJECTS: Project[] = [
       "A modern Minecraft launcher focused on providing a streamlined way to manage Minecraft installations, instances, mods, and server configurations through a dedicated desktop application.",
     category: "Desktop Apps",
     link: "https://noxara-launcher.vercel.app/",
+    linkType: "website",
   },
   {
     name: "Eclipse Mods",
