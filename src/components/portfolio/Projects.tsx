@@ -41,7 +41,7 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     name: "Yuzei Labs",
-    status: "Active",
+    status: "In Development",
     description:
       "An all-in-one development platform for Minecraft mod and plugin developers. YuzeiLabs automates JAR builds, deployment to local and remote servers, Discord release publishing, AI-powered error analysis, and project management. The platform is functionally developed but is currently unreleased while undergoing further testing, refinement, and stabilization.",
     category: "Desktop Apps",
@@ -49,11 +49,11 @@ const PROJECTS: Project[] = [
   },
   {
     name: "Noxara Launcher",
-    status: "In Development",
+    status: "Active",
     description:
       "A modern Minecraft launcher focused on providing a streamlined way to manage Minecraft installations, instances, mods, and server configurations through a dedicated desktop application.",
     category: "Desktop Apps",
-    link: "#",
+    link: "https://noxara-launcher.vercel.app/",
   },
   {
     name: "Eclipse Mods",
@@ -86,15 +86,6 @@ const PROJECTS: Project[] = [
       "My personal portfolio website featuring my Minecraft projects, web applications, desktop tools, and development journey, built to showcase what I create and what I'm currently working on.",
     category: "Website Apps",
     link: "#",
-  },
-  {
-    name: "Eclipse Servers",
-    status: "In Development",
-    description:
-      "The official website for the Eclipse server, showcasing its gameplay systems, features, development progress, and the wider Eclipse ecosystem.",
-    category: "Website Apps",
-    link: "https://eclipse-servers.vercel.app/",
-    linkType: "website",
   },
 ];
 
