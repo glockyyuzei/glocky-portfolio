@@ -45,7 +45,8 @@ const PROJECTS: Project[] = [
     description:
       "An all-in-one development platform for Minecraft mod and plugin developers. YuzeiLabs automates JAR builds, deployment to local and remote servers, Discord release publishing, AI-powered error analysis, and project management. The platform is functionally developed but is currently unreleased while undergoing further testing, refinement, and stabilization.",
     category: "Desktop Apps",
-    link: "#",
+    link: "https://github.com/glockyyuzei/yuzei-labs",
+    linkType: "website",
   },
   {
     name: "Noxara Launcher",
